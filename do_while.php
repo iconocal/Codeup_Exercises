@@ -21,11 +21,15 @@
 // }	while ($count >= -10);
 
 
-$a = 2;
+// $a = 2;
 
-do {
-	echo $a . PHP_EOL;
-	$a *=$a;
-} while ($a < 1000000);
+// do {
+// 	echo $a . PHP_EOL;
+// 	$a *=$a;
+// } while ($a < 1000000);
 
+$a = 5;
+
+$num = $a++;
+var_dump(num);
 
