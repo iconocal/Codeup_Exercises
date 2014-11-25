@@ -38,11 +38,11 @@ $books = array(
 
 
 
-foreach ($books as $key => $book) {
-	if ($book['published'] > 1950) {
-		echo "The book is $key\n";
-		foreach ($book as $key => $value) {
-			echo "$key = {$value}\n";
+foreach ($books as $title => $info) {
+	if ($info['published'] > 1950) {
+		echo "The book is $title\n";
+		foreach ($info as $title => $value) {
+			echo "$title = {$value}\n";
 		}
 	}
 
@@ -50,3 +50,6 @@ echo "\n";
 
 }
 
+echo "Author: {$info['author']}\n";
+
+// echo "Author: {$book['published']}\n"
