@@ -16,16 +16,21 @@ $end = trim(fgets(STDIN));
 
 // ask user for incrementer
 // stdout message
-// $incrementer = stdin
+// $tempinc = STDIN
+// terminary op to check for integer
+// $incrementer = $tempinc IF $tempinc = integer
+// if no/invalid input set $incrementer to 1 by default
 
 fwrite(STDOUT, "Increment by: ");
-$incrementer = trim(fgets(STDIN));
+$tempinc = trim(fgets(STDIN));
+$incrementer = (is_numeric($tempinc)) ? $tempinc : 1;
+
 
 // loop below with information above
 // set $i with a range of $start to $end
 // increment using $incrementer
 
-for ($i=$start; $i <= $end; $i += $incrementer) { 
+for ($i= $start; $i <= $end; $i += $incrementer) { 
 	echo "$i\n";
 }
 
