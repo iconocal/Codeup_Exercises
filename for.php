@@ -4,15 +4,26 @@
 // stdout message
 // $start = stdin
 
-fwrite(STDOUT, "Enter starting number: ");
-$start = trim(fgets(STDIN));
 
-// ask user for end number
-// stdout message
-// $end = stdin
 
-fwrite(STDOUT, "Enter end number: ");
-$end = trim(fgets(STDIN));
+do {
+	fwrite(STDOUT, "Enter starting number: ");
+	$start = trim(fgets(STDIN));	
+} while (!is_numeric($start));
+
+do {
+	fwrite(STDOUT, "Enter end number: ");
+	$end = trim(fgets(STDIN));	
+} while (!is_numeric($end));
+
+echo "This input is valid. Let's proceed.\n";
+
+
+// check to validate $start & $end both integers
+// if integers(true) then procede to prompt for increment value
+// if integers(false): stdout invalid value message & start over
+
+
 
 // ask user for incrementer
 // stdout message
