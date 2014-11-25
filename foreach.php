@@ -29,19 +29,18 @@
 
 $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
-foreach ($things as $value) {
+foreach ($things as $thing) {
 
-    if (is_array($value)) {
+    if (is_array($thing)) {
     
-        $subArray = $value;
-            foreach ($subArray as $subItem) {
-                echo "$subItem\n";
-        }
+        foreach ($thing as $subItem) {
+            echo "$subItem\n";
+            }
     }
 
-    if (!is_array($value)) {
+    if (!is_array($thing)) {
      
-        echo "$value\n";
+        echo "$thing\n";
     
         }
     
