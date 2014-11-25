@@ -2,23 +2,51 @@
 
 // Foreach exercise iteration #2: foreach through the array($things) and output variable type
 
-$things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
+// $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
-foreach ($things as $value) {
+// foreach ($things as $value) {
 
-    echo gettype($value) . PHP_EOL;
-}
+//     echo gettype($value) . PHP_EOL;
+// }
 
 // Foreach exercise iteration #3: foreach through the array and output ONLY var type scalar.
 
+// $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
+
+// foreach ($things as $value) {
+
+//     if (is_scalar($value)) {
+//     echo $value . PHP_EOL;
+
+//     }
+    
+// }
+
+
+//
+// Create a loop that will echo out every value, including those nested in arrays
+//
+
 $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
 foreach ($things as $value) {
 
-    echo gettype($value) . PHP_EOL;
+    if (is_array($value)) {
+    
+        $subArray = $value;
+            foreach ($subArray as $subItem) {
+                echo "$subItem\n";
+        }
+    }
+
+    if (!is_array($value)) {
+     
+        echo "$value\n";
+    
+        }
+    
 }
-
-
+    
 
 
 
