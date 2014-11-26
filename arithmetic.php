@@ -28,12 +28,13 @@
 function divide($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
     	if ($b === 0) {
-    		echo "ERROR: Divide By Zero!\n";
+    		echo "ERROR: Your divisor was {$b}. That is not allowed.\n";
 		} else {
 			echo $a / $b . PHP_EOL;
 		} 
 	} else {
 		echo "ERROR: Both arguments must be numbers\n";
+		echo "You entered {$a} and {$b}\n";
 		}	
 }
 
@@ -49,7 +50,7 @@ function divide($a, $b) {
 
 
 $num1 = 10;
-$num2 = 5;
+$num2 = "x";
 
 // add($num1, $num2);
 
