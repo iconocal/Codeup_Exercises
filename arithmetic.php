@@ -1,37 +1,67 @@
 <?php
 
-// function add($a, $b) {
-//     echo $a + $b;
-// }
+function add($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo $a + $b . PHP_EOL;
+	} else {
+		echo "ERROR: Both arguments must be numbers\n";
+	}
+}
 
-// function subtract($a, $b) {
-//     echo $a - $b;
-// }
+function subtract($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo $a - $b . PHP_EOL;
+	} else {
+		echo "ERROR: Both arguments must be numbers\n";
+	}
+}
 
-// function multiply($a, $b) {
-//     echo $a * $b;
-// }
+function multiply($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo $a * $b . PHP_EOL;
+	} else {
+		echo "ERROR: Both arguments must be numbers\n";
+	}
 
-// function divide($a, $b) {
-//     echo $a / $b;
-// }
+}
 
-// function modulus($a, $b) {
-// 	echo $a % $b;
-// }
+function divide($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo $a / $b . PHP_EOL;
+	} else {
+		echo "ERROR: Both arguments must be numbers\n";
+	}
+}
 
-// $num1 = 10;
-// $num2 = 5;
+function modulus($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+		echo $a % $b . PHP_EOL;
+	} else {
+		echo "ERROR: Both arguments must be numbers\n";
+	}
+		
+}
 
-// echo add($num1, $num2) . PHP_EOL;
+$num1 = 10;
+$num2 = 5;
 
-// echo subtract($num1, $num2) . PHP_EOL;
+add($num1, $num2);
 
-// echo multiply($num1, $num2) . PHP_EOL;
+subtract($num1, $num2);
 
-// echo divide($num1, $num2) . PHP_EOL;
+multiply($num1, $num2);
 
-// echo modulus($num1, $num2) . PHP_EOL;
+divide($num1, $num2);
+
+modulus($num1, $num2);
+
+
+
+
+
+
+
+
 
 
 // default value: boolean $strict determines which is done, if or else
