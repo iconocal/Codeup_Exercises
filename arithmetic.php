@@ -25,16 +25,24 @@
 
 // }
 
+function numError($a, $b) {
+	echo "ERROR: Both arguments must be numbers\n";
+	echo "You entered {$a} and {$b}\n";
+}
+
+function divError($b) {
+	echo "ERROR: Your divisor was {$b}. That is not allowed.\n";
+}
+
 function divide($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
     	if ($b === 0) {
-    		echo "ERROR: Your divisor was {$b}. That is not allowed.\n";
+    		divError($b);
 		} else {
 			echo $a / $b . PHP_EOL;
 		} 
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
-		echo "You entered {$a} and {$b}\n";
+		numError($a, $b);
 		}	
 }
 
@@ -50,7 +58,7 @@ function divide($a, $b) {
 
 
 $num1 = 10;
-$num2 = "x";
+$num2 = 0;
 
 // add($num1, $num2);
 
