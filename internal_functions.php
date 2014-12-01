@@ -12,6 +12,7 @@ $array = array(1, 2, 3);
 
 
 function checkVar($variable) {
+	unset($variable);
 	if (isset($variable)) {
 		return "SET";
 	} else {
@@ -20,13 +21,15 @@ function checkVar($variable) {
 	
 }
 
-function checkEmpty($variable) {
-	if (empty($variable)) {
-		return "EMPTY";
-	} else {
-		return "NOT EMPTY";
-	}
-}
+
+// function checkEmpty($variable) {
+// 	if (empty($variable)) {
+// 		return "EMPTY";
+// 	} else {
+// 		return "NOT EMPTY";
+// 	}
+// }
+
 
 echo "\$nothing is " . checkVar($nothing) . PHP_EOL;
 echo "\$something is " . checkVar($something) . PHP_EOL;
@@ -37,10 +40,10 @@ echo PHP_EOL;
 
 // Check to see is $something is EMPTY or not
 
-echo "\$something is " . checkEmpty($something) . PHP_EOL;
+// echo "\$something is " . checkEmpty($something) . PHP_EOL;
 
-echo PHP_EOL;
-echo PHP_EOL;
+// echo PHP_EOL;
+// echo PHP_EOL;
 
 
 
