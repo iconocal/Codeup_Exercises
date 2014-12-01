@@ -11,39 +11,39 @@ $array = array(1, 2, 3);
 // empty, and display "$variable_name is SET|EMPTY"
 
 
-// function checkVar($variable) {
-// 	unset($variable);
-// 	if (isset($variable)) {
-// 		return "SET";
-// 	} else {
-// 		return "EMPTY";
-// 	}
+function checkVar($variable) {
+	unset($variable);
+	if (isset($variable)) {
+		return "SET";
+	} else {
+		return "NULL";
+	}
 	
-// }
+}
 
 
-// function checkEmpty($variable) {
-// 	if (empty($variable)) {
-// 		return "EMPTY";
-// 	} else {
-// 		return "NOT EMPTY";
-// 	}
-// }
+function checkEmpty($variable) {
+	if (empty($variable)) {
+		return "EMPTY";
+	} else {
+		return "NOT EMPTY";
+	}
+}
 
 
-// echo "\$nothing is " . checkVar($nothing) . PHP_EOL;
-// echo "\$something is " . checkVar($something) . PHP_EOL;
-// echo "\$array is " . checkVar($array) . PHP_EOL;
+echo "\$nothing is " . checkVar($nothing) . PHP_EOL;
+echo "\$something is " . checkVar($something) . PHP_EOL;
+echo "\$array is " . checkVar($array) . PHP_EOL;
 
-// echo PHP_EOL;
-// echo PHP_EOL;
+echo PHP_EOL;
+echo PHP_EOL;
 
 // Check to see is $something is EMPTY or not
 
-// echo "\$something is " . checkEmpty($something) . PHP_EOL;
+echo "\$something is " . checkEmpty($something) . PHP_EOL;
 
-// echo PHP_EOL;
-// echo PHP_EOL;
+echo PHP_EOL;
+echo PHP_EOL;
 
 
 
