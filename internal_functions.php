@@ -12,16 +12,19 @@ $array = array(1, 2, 3);
 
 function checkVar($variable) {
 	if (isset($variable)) {
-		return "Variable is set.";
+		return "SET";
 	} else {
-		return "Variable is empty.";
+		return "EMPTY";
 	}
 	
 }
 
-echo checkVar($nothing) . PHP_EOL;
-echo checkVar($something) . PHP_EOL;
-echo checkVar($array) . PHP_EOL;
+echo "\$nothing is " . checkVar($nothing) . PHP_EOL;
+echo "\$something is " . checkVar($something) . PHP_EOL;
+echo "\$array is " . checkVar($array) . PHP_EOL;
+
+echo PHP_EOL;
+echo PHP_EOL;
 
 
 
