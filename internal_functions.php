@@ -60,9 +60,9 @@ $unserial = unserialize($serializedArray);
 
 var_dump($unserial) . PHP_EOL;
 
-// echo unserialize($serializedArray) . PHP_EOL;
 
-// echo $unserial . PHP_EOL;
+
+
 
 
 
