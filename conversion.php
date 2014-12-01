@@ -16,7 +16,7 @@ function convert_tsp_to_tbsp() {
 
 function convert_to_tbsp($convert_from) {
 	switch($convert_from) {
-		case 'tsb':
+		case 'tsp':
 			formula
 			break;
 		case 
