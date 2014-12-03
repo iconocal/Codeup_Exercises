@@ -3,7 +3,13 @@
 
 // Converts array into list n1, n2, ..., and n3
 
-function humanized_list($inputArray) {
+// Adds alphabetize capability //
+
+function humanized_list($inputArray, $alpha = false) {
+	if ($alpha == true) {
+		sort($inputArray);
+	}
+
 	$lastName = array_pop($inputArray);
 	$newList = implode(', ', $inputArray);
 
@@ -11,8 +17,9 @@ function humanized_list($inputArray) {
 
 }
 
-
-
+//////////////////
+// Main Script //
+////////////////
 
  // Original String to explode //
 
@@ -25,7 +32,7 @@ $physicistsArray = explode(', ', $physicistsString);
 
 // Function call to humanize that list //
 
-$famousFakePhysicists = humanized_list($physicistsArray);
+$famousFakePhysicists = humanized_list($physicistsArray, true);
 
 // Output sentence //
 
