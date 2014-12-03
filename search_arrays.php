@@ -1,39 +1,65 @@
 <?php
 
  // first names
- $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
+//  $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 
- $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
+//  $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
 
-////////////////////////
-// DEFINED FUNCTIONS //
-//////////////////////
+// ////////////////////////
+// // DEFINED FUNCTIONS //
+// //////////////////////
 
-// Function: searchValues
+// // Function: searchValues
 
-function searchforName($needle, $haystack) {
-	$lookFor = $needle;
+// function searchforName($needle, $haystack) {
+// 	$lookFor = $needle;
 
-	$result = array_search($lookFor, $haystack);
+// 	$result = array_search($lookFor, $haystack);
 
-	if ($result === 0 || $result >= 1) {
-		// return "$haystack[$result]\n";
-		return 'TRUE';
-	} else {
-			return "FALSE";
-	}
-}
+// 	if ($result === 0 || $result >= 1) {
+// 		// return "$haystack[$result]\n";
+// 		return true;
+// 	} else {
+// 			return false;
+// 	}
+// }
 
 
 // Function: compareValues
 
+// Set counter = 0
+// Loop through first array, name by name
+// For each name in the first array, loop through the second array and 
+// increment counter when matches are found
+// or
+
+$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam', 'Dean'];
+
+$compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
+
+
+
+function compareArrays($names, $compare) {
+	$count = 0;
+	foreach ($names as $name) {
+		if (array_search($name, $compare) !== false) {
+	 		$count++;
+	 	}	
+
+	}
+	
+	return $count;
+}
+
+
+echo "The number of common values is: " . compareArrays($names, $compare) . PHP_EOL;
 
 // Program Begins Here
 
-$testName = 'Tina';
+// $testName = 'Tina';
 
-echo searchforName($testName, $names) . PHP_EOL;
+// echo searchforName($testName, $names) . PHP_EOL;
 
 
 
