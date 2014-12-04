@@ -24,47 +24,50 @@ $array2 = ['widget', 'wodget', 'wadget', 'wocket'];
 /* -------------------------------- */
 
 // This function accepts a number, and returns it's value squared.
-function squareThis() {
+
+// function squareThis($number) {
     
-    $numSquared = $number * $number;
-    return $numSquared;
-}
+//     $numSquared = $number * $number;
+//     return $numSquared;
+// }
 
-echo squareThis($number1) . PHP_EOL;
-
-/* -------------------------------- */
-
-// This function accepts a string, and returns that string with an uppercase first letter.
-function upperCaseFirst($string) {
-
-    $string = ucfirst($string);
-
-}
-
-echo upperCaseFirst($string1) . ' ' . upperCaseFirst($string2) . PHP_EOL;
+// echo squareThis($number1) . PHP_EOL;
 
 /* -------------------------------- */
 
-/* -------------------------------- */
+// // This function accepts a string, and returns that string with an uppercase first letter.
+// function upperCaseFirst($string) {
 
-// This function accepts a string and returns an array of letters.
-createArrayOfLetters($string) {
-    $array = str_split($string);
-    return $array;
-}
+//     $string = ucfirst($string);
 
-print_r(createArrayOfLetters($string1));
+//     return $string;
 
-/* -------------------------------- */
+// }
 
-/* -------------------------------- */
+// echo upperCaseFirst($string1) . ' ' . upperCaseFirst($string2) . PHP_EOL;
 
-// This function accepts two arrays, and returns one merged array.
+// /* -------------------------------- */
+
+// /* -------------------------------- */
+
+// // This function accepts a string and returns an array of letters.
+// function createArrayOfLetters($string) {
+//     $array = str_split($string);
+//     return $array;
+// }
+
+// print_r(createArrayOfLetters($string1));
+
+// /* -------------------------------- */
+
+// /* -------------------------------- */
+
+// // This function accepts two arrays, and returns one merged array.
 function mergeTheseArrays($first_array, $second_array) {
     $mergedArray = array_merge($first_array, $second_array);
     return $mergedArray;
 }
 
-print_r(mergeTheseArrays());
+print_r(mergeTheseArrays($array1, $array2));
 
 /* -------------------------------- */
